@@ -7,7 +7,7 @@ pipeline {
                     checkout([$class: 'GitSCM', branches [[name: '*/main']],
                         userRemoteConfigs: [[
                             credentialsId: 'INSERT HAJA',
-                            url: 'https://github.com/yahya924/respiratory.git'
+                            url: 'https://github.com/yahya924/respiratory.git']]])
                 }
             }
         }
