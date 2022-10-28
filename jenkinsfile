@@ -4,10 +4,8 @@ pipeline {
         stage("Pull") {
           steps{
                script {
-                    checkout([$class: 'GitSCM', branches [[name: '*/main']],
-                        userRemoteConfigs: [[
-                            credentialsId: 'INSERT HAJA',
-                            url: 'https://github.com/yahya924/respiratory.git']]])
+                    checkout([$class: 'GitSCM', branches: [[name: '*/main']],
+                        userRemoteConfigs: [[url: 'https://github.com/yahya924/respiratory.git']]])
                 }
             }
         }
