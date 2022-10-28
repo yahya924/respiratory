@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+      stages {
+        stage("Pull") {
+          steps{
+               script {
+                    checkout([$class: 'GitSCM', branches [[name: '*/main']],
+                        userRemoteConfigs: [[
+                            credentialsId: 'INSERT HAJA',
+                            url: 'https://github.com/yahya924/respiratory.git'
+                }
+            }
+        }
+       }
+       }
