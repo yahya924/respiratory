@@ -14,8 +14,7 @@ pipeline {
         stage("Build") {
           steps{
                script {
-                   dir("/home/vagrant/respiratory/my-app/Ansible") {
-                   sh "sudo ansible-playbook build.yml -i inventory/host.yml" }
+                   sh " ansible-playbook /home/vagrant/respiratory/my-app/Ansible/build.yml -i /home/vagrant/respiratory/my-app/Ansible/inventory/host.yml" 
                 }
             }
         }
